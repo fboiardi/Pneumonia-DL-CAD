@@ -6,10 +6,14 @@ A Python-based deep learning approach to automated pneumonia classification, loc
 1. `background_process.py` : Defines the `CXR_Processor` class for preprocessing CXRs. This includes cropping around the trunk region, enhancing contrast, removing background noise, and exporting both the processed images and a log of any failed processing attempts. Supports multiple image formats (e.g., JPG, PNG, DICOM).
 
 ## Usage
-These scripts have been designed to run in the background, as shown below:
+These scripts have been designed to run in the background. For Unix:
 
-```user@host:~$ nohup python3 -u /path/to/background_process.py > process.log 2>&1 & ```
+```bash
+nohup python3 -u /path/to/background_process.py > process.log 2>&1 &
+```
 
 To monitor progress:
 
-```user@host:~$ tail -f process.log```
+```bash
+tail -f process.log
+```
