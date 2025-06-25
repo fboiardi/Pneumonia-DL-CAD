@@ -7,10 +7,12 @@ A Python-based deep learning approach to automated pneumonia classification, loc
 <p align="center"><em>Right mid/lower zone pneumonia localisation</em></p>
 
 ## Scripts
-1. `background_process.py` : Defines the `CXR_Processor` class for preprocessing CXRs. This includes cropping around the trunk region, enhancing contrast, removing background noise, and exporting both the processed images and a log of any failed processing attempts. Supports multiple image formats (e.g., JPG, PNG, DICOM).
+1. `background_process.py` : Defines a `CXR_Processor` class for preprocessing CXRs. This includes cropping around the trunk region, enhancing contrast, removing background noise, and exporting both the processed images and a log of any failed processing attempts. Supports multiple image formats (e.g., JPG, PNG, DICOM).
+  
+2. `background_labeller.py` : Uses a locally deployed LLM (`DeepSeek-R1-Distill-Llama-8B`) to analyse MIMIC-CXR radiology reports, labelling pneumonia presence (positive, negative, or uncertain) and extracting positional information. Requires a Hugging Face token and assumes GPU availability.
 
 ## Usage
-These scripts have been designed to run in the background. For Unix:
+These scripts have been designed to run in the background. For Unix systems:
 
 ```bash
 nohup python3 -u /path/to/background_process.py > process.log 2>&1 &
@@ -21,3 +23,5 @@ To monitor progress:
 ```bash
 tail -f process.log
 ```
+
+## Notebooks
