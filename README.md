@@ -14,7 +14,7 @@ A Python-based deep learning approach to automated pneumonia classification, loc
 - `background_train.py` : Trains a convolutional neural network (`DenseNet-121`) to classify pneumonia presence from CXRs using the MIMIC-CXR and VinDr-CXR datasets. Incorporates data augmentation, transfer learning, early stopping, and checkpointing based on validation recall.
 
 ## Usage
-These scripts have been designed to run in the background. For Unix systems:
+These scripts are intended to run in the background due to the high volume of CXRs. For Unix systems:
 
 ```bash
 nohup python3 -u /path/to/background_process.py > process.log 2>&1 &
