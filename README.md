@@ -11,7 +11,7 @@ A Python-based deep learning approach to automated pneumonia classification, loc
   
 - `background_labeller.py` : Uses a locally deployed LLM (`DeepSeek-R1-Distill-Llama-8B`) to analyse MIMIC-CXR radiology reports, labelling pneumonia status (positive, negative, or uncertain) and extracting positional information. Requires a Hugging Face token and assumes GPU availability.
   
-- `background_train.py` : Trains a convolutional neural network (`DenseNet-121`) to classify pneumonia presence from CXRs using the MIMIC-CXR and VinDr-CXR datasets. Incorporates data augmentation, transfer learning, early stopping, and checkpointing based on validation recall.
+- `background_train.py` : Trains a convolutional neural network (`DenseNet-121`) to classify pneumonia status from CXRs using the MIMIC-CXR and VinDr-CXR datasets. Incorporates data augmentation, transfer learning, early stopping, and checkpointing based on validation recall.
 
 ## Usage
 These scripts are intended to run in the background due to the high volume of CXRs. For Unix systems:
