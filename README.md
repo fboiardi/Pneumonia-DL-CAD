@@ -27,5 +27,6 @@ tail -f process.log
 ```
 
 ## Notebooks
+- `data_prep.ipynb` : Exploratory notebook for reformatting MIMIC-CXR and VinDr-CXR data, defining helper functions for CXR image access, and preliminary analyses like CXR view classification using a pre-trained model (`ResNet-50`).
 
 ## Citation
