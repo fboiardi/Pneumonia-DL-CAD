@@ -7,7 +7,7 @@ A Python-based deep learning approach to automated pneumonia classification, loc
 <p align="center"><em>Right mid/lower zone pneumonia localisation</em></p>
 
 ## Scripts
-- `background_process.py` : Defines a `CXR_Processor` class for preprocessing CXRs. This includes cropping around the trunk region, enhancing contrast, removing background noise, and exporting both the processed images and a log of any failed processing attempts. Supports multiple image formats (e.g., JPG, PNG, DICOM).
+- `background_process.py` : Defines a `CXR_Processor` class for preprocessing CXRs. Includes cropping around the trunk region, enhancing contrast, removing background noise, and exporting both processed images and a log of any failed processing attempts. Supports multiple image formats (e.g., JPG, PNG, DICOM).
   
 - `background_labeller.py` : Uses a locally deployed LLM (`DeepSeek-R1-Distill-Llama-8B`) to analyse MIMIC-CXR radiology reports, labelling pneumonia status (positive, negative, or uncertain) and extracting positional information. Requires a Hugging Face token and assumes GPU availability.
   
@@ -28,5 +28,7 @@ tail -f process.log
 
 ## Notebooks
 - `data_prep.ipynb` : Exploratory notebook for reformatting MIMIC-CXR and VinDr-CXR data, defining helper functions for CXR image access, and preliminary analyses like CXR view classification using a pre-trained model (`ResNet-50`).
+
+- `explainability.ipynb` : Consolidates and reformats CXR datasets for model training. Loads the trained `DenseNet-121` classifier to produce Grad-CAM visualisations and compare activations to lung-zone ground truth derived from report text using `DeepSeek-R1-Distill-Llama-8B`.
 
 ## Citation
