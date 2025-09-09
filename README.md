@@ -33,4 +33,7 @@ tail -f process.log
 
 - `mimic_reports.ipynb` : Parses MIMIC-CXR JSON radiology reports into unified texts and merges them with image metadata. Filters pneumonia-relevant cases and defines an LLM prompt to classify pneumonia (positive/negative/uncertain) and extract localisation information.
 
+## Requirements
+Dependencies are listed in `requirements.txt`.
+
 ## Citation
