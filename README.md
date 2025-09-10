@@ -17,7 +17,7 @@ A Python-based deep learning approach to automated pneumonia classification, loc
 These scripts are intended to run in the background due to the high volume of CXRs. For Unix systems:
 
 ```bash
-nohup python3 -u /path/to/background_process.py > process.log 2>&1 &
+nohup python3 -u background_process.py > process.log 2>&1 &
 ```
 
 To monitor progress:
@@ -35,5 +35,9 @@ tail -f process.log
 
 ## Requirements
 Dependencies are listed in `requirements.txt`.
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Citation
