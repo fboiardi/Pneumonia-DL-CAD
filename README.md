@@ -29,9 +29,11 @@ tail -f process.log
 ## Notebooks
 - `data_prep.ipynb` : Exploratory notebook for reformatting MIMIC-CXR and VinDr-CXR data, defining helper functions for CXR image access, and preliminary analyses like CXR view classification using a pre-trained model (`ResNet-50`).
 
+- `mimic_reports.ipynb` : Parses MIMIC-CXR JSON radiology reports into unified texts and merges them with image metadata. Filters pneumonia-relevant cases and defines an LLM prompt to classify pneumonia (positive/negative/uncertain) and extract localisation information.
+
 - `explainability.ipynb` : Consolidates and reformats CXR datasets for model training. Loads the trained `DenseNet-121` classifier to produce Grad-CAM visualisations and compare activations to lung-zone ground truth derived from report text using `DeepSeek-R1-Distill-Llama-8B`.
 
-- `mimic_reports.ipynb` : Parses MIMIC-CXR JSON radiology reports into unified texts and merges them with image metadata. Filters pneumonia-relevant cases and defines an LLM prompt to classify pneumonia (positive/negative/uncertain) and extract localisation information.
+- `model_eval.ipynb` : Compares distributions of predicted pneumonia probabilities stratified by LLM-derived ground truth labels. Evaluates model performance across different CXR datasets, and includes error analysis focused on false-negative report text.
 
 ## Requirements
 Dependencies are listed in `requirements.txt`.
