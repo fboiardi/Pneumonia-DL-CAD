@@ -35,6 +35,8 @@ tail -f process.log
 
 - `model_eval.ipynb` : Compares distributions of predicted pneumonia probabilities stratified by LLM-derived ground truth labels. Evaluates model performance across different CXR datasets, and includes error analysis focused on false-negative report text.
 
+- `report_snippets.ipynb` : Generates radiology report snippets from pneumonia localisation strings using a locally run LLM.
+
 ## Requirements
 Dependencies are listed in `requirements.txt`.
 
