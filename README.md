@@ -8,6 +8,8 @@ A Python-based deep learning approach to automated pneumonia classification, loc
 
 ## Scripts
 - `background_process.py` : Defines a `CXR_Processor` class for preprocessing CXRs. Includes cropping around the trunk region, enhancing contrast, removing background noise, and exporting both processed images and a log of any failed processing attempts. Supports multiple image formats (e.g., JPG, PNG, DICOM).
+
+- `VinDR_views.py` : Example of CXR view classification (frontal vs lateral) for the VinDr-CXR dataset using a fine-tuned `ResNet-50` model. Includes DICOM preprocessing (photometric inversion, windowing, 8-bit scaling).
   
 - `background_labeller.py` : Uses a locally deployed LLM (`DeepSeek-R1-Distill-Llama-8B`) to analyse MIMIC-CXR radiology reports, labelling pneumonia status (positive/negative/uncertain) and extracting positional information. Requires a Hugging Face token and assumes GPU availability.
   
